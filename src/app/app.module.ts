@@ -1,3 +1,4 @@
+import { SliderModule } from 'primeng/slider';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -8,6 +9,8 @@ import { AnimesPageComponent } from './pages/animes-page/animes-page.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GalleryComponent } from './shared/components/gallery/gallery.component';
+import { FormsModule } from '@angular/forms';
+import { LoadingComponent } from './shared/components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +18,15 @@ import { GalleryComponent } from './shared/components/gallery/gallery.component'
     HomePageComponent,
     AnimesPageComponent,
     HeaderComponent,
-    GalleryComponent
+    GalleryComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    SliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

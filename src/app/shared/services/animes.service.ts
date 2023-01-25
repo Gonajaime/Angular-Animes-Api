@@ -28,8 +28,16 @@ export class AnimesService {
     return this.http.get("https://kitsu.io/api/edge/anime?page%5Blimit%5D=5&sort=-user_count")
   }
 
+
+  getFilterAnimes(text: string | null, years: number[] | null ) {
+    return this.http.get(`https://kitsu.io/api/edge/anime?page%5Boffset%5D=0&page%5Blimit%5D=20${text ? "&filter%5Btext%5D=" + text : ""}&sort=-user_count&filter%5Byear%5D=${years![0]}..${years![1]}`)
+    
+  }
+
+
+
   // getAnime() {}
 
-  // postAnime() {}
-  // putAnime() {}
+  // ostAnime() {}
+  // putAnime() {}p
 }
