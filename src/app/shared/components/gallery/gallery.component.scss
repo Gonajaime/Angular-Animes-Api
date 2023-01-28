@@ -1,0 +1,33 @@
+.sectionAnimes {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: aliceblue;
+}
+
+.sectionAnimes img {
+  width: 160px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.5s ease;
+}
+
+.sectionAnimes img:hover {
+  cursor: cell;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 13%;
+}
+
+figcaption {
+  font-family: fantasy;
+  font-style: italic;
+  color: #0818d9;
+}

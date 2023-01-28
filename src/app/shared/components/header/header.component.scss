@@ -1,4 +1,12 @@
-nav{
-    display: flex;
-    justify-content: space-evenly;
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
+}
+
+a {
+  font-family: fantasy;
+  font-style: italic;
+  color: white;
+  font-size: 2rem;
 }

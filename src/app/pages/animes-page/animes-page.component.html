@@ -1,9 +1,12 @@
-
 <div class="searchAge">
-<input type="text" placeholder="Title..." [(ngModel)]="searchText"/>
-    <h5>Range: {{years[0] + ' - ' + years[1]}}</h5>
-<p-slider  [(ngModel)]="years" [range]="true" [min]="1907" [max]="2022"></p-slider>
-<button (click)="search(searchText, years)">Search...</button>
+  <input type="text" placeholder="Title..." [(ngModel)]="searchText" />
+  <h5>Range: {{ years[0] + " - " + years[1] }}</h5>
+  <p-slider
+    [(ngModel)]="years"
+    [range]="true"
+    [min]="1907"
+    [max]="2022"
+  ></p-slider>
+  <button (click)="search(searchText, years)">Search...</button>
 </div>
 <app-gallery class="gallery" [list]="animes"></app-gallery>
-  

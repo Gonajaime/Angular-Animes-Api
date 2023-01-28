@@ -1,20 +1,19 @@
-import { Injectable } from '@angular/core';
-import {Subject} from 'rxjs'
+import { Injectable } from "@angular/core";
+import { Subject } from "rxjs";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class LoadingService {
-
   loadingSubject = new Subject<boolean>();
 
   constructor() {}
 
-  next(newValue: any){
-    this.loadingSubject.next(newValue)
+  next(newValue: any) {
+    this.loadingSubject.next(newValue);
   }
 
-  obs(){
+  obs() {
     return this.loadingSubject;
   }
 }
